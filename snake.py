@@ -31,7 +31,17 @@ def move():
     head = snake[-1].copy()
     head.move(aim)
 
-    if not inside(head) or head in snake:
+    if not inside(head):
+        if head.x > 190:
+            head.x = -200
+        elif head.x < -200:
+            head.x = 190
+        elif head.y > 190:
+            head.y = -200
+        elif head.y < -200:
+            head.y = 190
+
+    elif head in snake:
         square(head.x, head.y, 9, 'red')
         update()
         return
