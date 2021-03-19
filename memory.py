@@ -27,7 +27,6 @@ while True:
     elif length > 10:
         print("The grid side size must be smaller or equal to 10")
     else:
-<<<<<<< HEAD
         break        
 
 area = length ** 2
