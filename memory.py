@@ -25,9 +25,7 @@ while True:
     elif length > 10:
         print("The grid side size must be smaller or equal to 10")
     else:
-        break
-        
-    
+        break        
 
 area = length ** 2
 remainingTiles = area/2 # We define the remaining tiles as the total tiles over 2.
@@ -39,15 +37,12 @@ taps = 0
 xPixels = 400 / length
 useLetters = True if input("Type L if you want to use letters instead of numbers: ") == 'L' else False
 
-print(tiles)
-
 if useLetters: # If user decided to use letters we make the tiles list of letters, , accomplishing what EXERCISE 5 specifies.
     seed(1)
 
     for i in range (len(tiles)):
         while True: # This while cycle will make sure we are using only letters, and that none of them are repeating
             element = tiles[i] if type(tiles[i]) is int else randrange(65, 90)
-            print("Element = " + str(element))
 
             if (element >= 65 and element <= 90) or (element >= 97 and element <= 122):
                 char = chr(element)
@@ -79,7 +74,7 @@ def index(x, y):
 
 def xy(count):
     "Convert tiles count to (x, y) coordinates."
-    return (count % length) * xPixels - 200, (count // length) * xPixels - 200
+    return (count % length) * xPixels - 200, (count // length) * xPixels - 200 # The adding of xPixels variable makes the square adapt to any grid side size.
 
 def tap(x, y):
     "Update mark and hidden tiles based on tap."
@@ -88,7 +83,7 @@ def tap(x, y):
     spot = index(x, y)
     mark = state['mark']
     taps += 1 # Adds 1 to the count of taps, accomplishing what EXERCISE 1 specifies.
-    print(taps)
+    print("You have made %d taps." % (taps))
 
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
@@ -99,7 +94,7 @@ def tap(x, y):
         
         if remainingTiles <= 1: # If there's not remaining tiles then it notifies you that you won, accomplishing what EXERCISE 3 specifies.
             print("You won!\nYou made %d movements" % (taps))
-        else: # Else it just subtract a tile to the remaining tiles count.
+        else: # Else it just subtracts a tile to the remaining tiles count.
             remainingTiles -= 1
 
 def draw():
