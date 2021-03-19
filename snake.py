@@ -27,6 +27,17 @@ def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
 
+def skipEdge(object):
+    if not inside(object):
+        if object.x > 190:
+            object.x = -200
+        elif object.x < -200:
+            object.x = 190
+        elif object.y > 190:
+            object.y = -200
+        elif object.y < -200:
+            object.y = 190
+
 def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
@@ -39,29 +50,15 @@ def move():
       food.x = food.x -20
     if randNum == 49:
       food.y = food.y -20
+
+    # Make snake go around the edges
+    skipEdge(head)
+
     # Make the food go around the edges
-    if not inside(food):
-        if food.x > 190:
-            food.x = -200
-        elif food.x < -200:
-            food.x = 190
-        elif food.y > 190:
-            food.y = -200
-        elif food.y < -200:
-            food.y = 190
+    skipEdge(food)
 
-    # Make the snake go around the edges
-    if not inside(head):
-        if head.x > 190:
-            head.x = -200
-        elif head.x < -200:
-            head.x = 190
-        elif head.y > 190:
-            head.y = -200
-        elif head.y < -200:
-            head.y = 190
 
-    elif head in snake:
+    if head in snake:
         square(head.x, head.y, 9, 'red')
         update()
         return
