@@ -12,6 +12,7 @@ Exercises
 from turtle import *
 from random import randrange
 from freegames import square, vector
+import os
 
 food = vector(0, 0)
 snake = [vector(10, 0)]
@@ -32,6 +33,24 @@ def move():
     head.move(aim)
     speed = len(snake)
 
+    # Move food
+    randNum = randrange(1,50)
+    if randNum == 1:
+      food.x = food.x -20
+    if randNum == 49:
+      food.y = food.y -20
+    # Make the food go around the edges
+    if not inside(food):
+        if food.x > 190:
+            food.x = -200
+        elif food.x < -200:
+            food.x = 190
+        elif food.y > 190:
+            food.y = -200
+        elif food.y < -200:
+            food.y = 190
+
+    # Make the snake go around the edges
     if not inside(head):
         if head.x > 190:
             head.x = -200
@@ -65,7 +84,7 @@ def move():
     update()
     ontimer(move, int(100/speed))
 
-
+os.system('cls' if os.name == 'nt' else 'clear')
 setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)

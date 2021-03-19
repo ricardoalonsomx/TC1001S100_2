@@ -21,14 +21,13 @@ from freegames import path
 
 while True:
     length = int(input("Please insert the size of the grid sides: ")) if input("Type Y if you want a custom size grid: ") == 'Y' else 4 # This variable manages how many rows/columns the grid will have, , accomplishing what EXERCISE 2 specifies.
-    
+
     if length % 2 != 0:
         print("The grid side size must be an even number\n")
     elif length > 10:
         print("The grid side size must be smaller or equal to 10")
     else:
-<<<<<<< HEAD
-        break        
+        break
 
 area = length ** 2
 remainingTiles = area / 2 # We define the remaining tiles as the total tiles over 2.
@@ -57,7 +56,7 @@ if useLetters: # If user decided to use letters we make the tiles list of letter
                 break
 
 tiles *= 2
-            
+
 
 def square(x, y):
     "Draw white square with black outline at (x, y)."
@@ -94,7 +93,7 @@ def tap(x, y):
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None
-        
+
         if remainingTiles <= 1: # If there's not remaining tiles then it notifies you that you won, accomplishing what EXERCISE 3 specifies.
             print("\nYou won!\nYou made %d movements" % (taps))
         else: # Else it just subtracts a tile to the remaining tiles count.
