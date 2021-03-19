@@ -45,7 +45,7 @@ Snake.py:
 
     To Solve the second exercise we observe the edges from the inside()
     function and use the to construct a condition such that when the
-    snake gets out of the setup, it reapears on the other side of it.
+    snake gets out of the setup, it reappears on the other side of it.
 
     On the second exercise, we tried to make the food move contrary to what
     the user entered through the keyboard to make it run away from the Snake
@@ -57,6 +57,6 @@ Snake.py:
     food had to be static for the snake to eat it and decided to use a random
     number from 0 to 50 to decide if the food moved on x, on y or stayed static.
 
-    To make it more congruent, we added the same bahaviour from exercise 1 to
+    To make it more congruent, we added the same behaviour from exercise 1 to
     the food so it could go around the edges. We decided to make this behaviour
-    a function skipEdge() to recicle code and aply it to both objects.
+    a function skipEdge() to recicle code and apply it to both objects.
