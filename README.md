@@ -41,6 +41,7 @@ Memory.py:
     codes and converts them to its character.
 
 Snake.py:
+
     To increase the speed of the snake we introduced the command ontimer, 
     which makes the snake move (100/speed)miliseconds. 
     Complying with the requirements provided by the instructions within the excercise.
