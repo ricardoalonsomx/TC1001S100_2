@@ -30,6 +30,7 @@ def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
     head.move(aim)
+    speed = len(snake)
 
     if not inside(head) or head in snake:
         square(head.x, head.y, 9, 'red')
@@ -52,7 +53,7 @@ def move():
 
     square(food.x, food.y, 9, 'green')
     update()
-    ontimer(move, 100)
+    ontimer(move, int(100/speed))
 
 
 setup(420, 420, 370, 0)
