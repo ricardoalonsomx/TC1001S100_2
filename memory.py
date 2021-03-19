@@ -9,7 +9,7 @@ Exercises:
 4. Center single-digit tile.
 5. Use letters instead of tiles.
 
-Excercises solved by Ricardo Alonso
+Excercises solved by A. Ricardo Alonso Aróstegui
 18/03/21.
 """
 
@@ -28,7 +28,7 @@ while True:
         break        
 
 area = length ** 2
-remainingTiles = area/2 # We define the remaining tiles as the total tiles over 2.
+remainingTiles = area / 2 # We define the remaining tiles as the total tiles over 2.
 car = path('car.gif')
 tiles = list(range(int(remainingTiles)))
 state = {'mark': None}
@@ -37,7 +37,7 @@ taps = 0
 xPixels = 400 / length
 useLetters = True if input("Type L if you want to use letters instead of numbers: ") == 'L' else False
 
-if useLetters: # If user decided to use letters we make the tiles list of letters, , accomplishing what EXERCISE 5 specifies.
+if useLetters: # If user decided to use letters we make the tiles list of letters, accomplishing what EXERCISE 5 specifies.
     seed(1)
 
     for i in range (len(tiles)):
@@ -93,7 +93,7 @@ def tap(x, y):
         state['mark'] = None
         
         if remainingTiles <= 1: # If there's not remaining tiles then it notifies you that you won, accomplishing what EXERCISE 3 specifies.
-            print("You won!\nYou made %d movements" % (taps))
+            print("\nYou won!\nYou made %d movements" % (taps))
         else: # Else it just subtracts a tile to the remaining tiles count.
             remainingTiles -= 1
 
