@@ -41,7 +41,12 @@ Memory.py:
     codes and converts them to its character.
 
 Snake.py:
-    */ Tu parte aquí Humberto
+    To increase the speed of the snake we introduced the command ontimer, 
+    which makes the snake move (100/speed)miliseconds. 
+    Complying with the requirements provided by the instructions within the excercise.
+    As we increse velocity everytime the snake successfully takes in the food, 
+    we reduce time while increasing the speed. 
+    To accomplish this we introduced the command speed = len(snake). 
 
     To Solve the second exercise we observe the edges from the inside()
     function and use the to construct a condition such that when the
