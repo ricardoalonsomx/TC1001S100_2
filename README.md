@@ -35,7 +35,7 @@ Memory.py:
     For the fourth exercise we just added a condition in the draw 
     function which detects if the length of the tile content is 
     equal to one (single-digit) so it changes its x value, 
-    centeringit, or if it is greater than 1 (not centering it).
+    centering it, or if it is greater than 1 (not centering it).
 
     Finally, for the fifth exercise we made the code generate some 
     random numbers, or if possible reuse the numbers previously 
