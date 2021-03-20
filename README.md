@@ -10,8 +10,6 @@ Humberto Murrieta Pepping - A01029184
 
 Link al video explicatorio: https://youtu.be/u7xF4CQ1AAw.
 
-
-
 March 19, 2021
 
 Memory.py:
