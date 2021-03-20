@@ -6,13 +6,16 @@ Professor Gilberto Echeverría Furió.
 By:
 A. Ricardo Alonso Aróstegui - A01029011
 Arturo Sosa Carrillo - A01022687
+Humberto Murrieta Pepping - A01029184
+
+Link al video explicatorio: https://youtu.be/u7xF4CQ1AAw.
 
 
 March 19, 2021
 
 Memory.py:
 
-    To solve the first exercise of this videogame we define a
+    To solve the first exercise of this videogame we defined a
     variable named taps, initially as 0. This variable is declared
     as global inside the tap function, so each tap it adds one to
     the value.
