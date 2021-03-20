@@ -6,6 +6,7 @@ Professor Gilberto Echeverría Furió.
 By:
 A. Ricardo Alonso Aróstegui - A01029011
 Arturo Sosa Carrillo - A01022687
+Humberto Murrieta - A01029184
 
 
 March 19, 2021
